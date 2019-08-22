@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<style>	   
+	div{
+	
+		width:400px;
+		border-radius:10px;		
+		padding-top:10px;                
+	}
+        input{
+           margin-bottom: 20px; 
+        }
+/*        .hh{
+            width: 200px!important;
+        }*/
+
+	</style>
+    </head>
+    <body>
+        <center><h1>Register</h1></center>		
+	<center>
+        <div>            
+            <form action="Register" method="post" onsubmit="checkforblank()" >
+                <div class="row">
+                    <div class="col">
+                        <input id="fname" type="text" class="form-control" name="firstname" placeholder="First name">
+                        <input id="lname" type="text" class="form-control" name="lastname" placeholder="Last name">
+                        <input id="uname" type="text" class="form-control" name="username" placeholder="User name">
+                        <input id="mail" type="email" class="form-control" name="email" placeholder="Email">
+                        <input id="date" type="date" class="form-control"  name="birt_date" value="2000-12-31" max="2000-12-31">
+                        <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                        <!--<input id="myBtn" class="btn btn-success  btn-block" type="submit" value="Sign Up">-->     
+                         <button id="myBtn"  type="submit" class="btn btn-success  btn-block">Submit</button>
+                    </div>                 
+                </div>
+            </form>
+        </div>
+        </center>   
+      
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"  crossorigin="anonymous"></script> 
+<script src="https://code.jquery.com/jquery-3.4.1.js"  crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js"></script>
+<script src="snbutton.js"></script>
+
+
+ <script>
+            $(document).ready(function(){
+                SNButton.init("myBtn",{
+                    fields:["fname","lname","uname","mail","password"],
+                    enabletext: "Submit",
+                    disabletext: "Please Enter Data"
+                })
+            })
+               
+        </script>       
+    </body>
+</html>
+
+
+
+<!--		<table>
+                    
+                    <tr>
+			<td>First Name</td>
+			<td><input id="first" type="text" class="form-control" name="firstname" placeholder="First Name"></td>
+                    </tr>                   
+                    <tr>
+			<td>Last Name</td>
+			<td><input type="text" class="form-control" name="lastname" placeholder="Last Name"></td>
+                    </tr>                   
+                    <tr>
+			<td>User Name</td>
+			<td><input type="text" class="form-control" name="username" placeholder="User Name"></td>
+                    </tr>                   
+                    <tr>
+			<td>Email</td>
+			<td><input type="email" class="form-control" name="email" placeholder="Email"></td>
+                    </tr>                    
+                    <tr>
+			<td>Birth Date</td>
+			<td><input type="date" class="form-control"  name="birt_date" value="2000-12-31" max="2000-12-31"></td>
+                    </tr>                    
+                    <tr>
+			<td>Password</td>
+			<td><input type="password" class="form-control" name="password" placeholder="Password"></td>
+                    </tr>                   
+                    <tr>
+                        <td ><button id= "mybtn" class="btn btn-success" type="submit" >Submit default</button></td>
+                    </tr>					
+		</table>-->
+            
+       
